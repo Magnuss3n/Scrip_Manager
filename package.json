@@ -4,6 +4,7 @@
   "description": "Copyright exclusively reserved@Lavanye_Singh",
   "main": "frontend/src/index.js",
   "scripts": {
+    "prestart": "npm install express",
     "start": "node backend/server.js",
     "server": "nodemon backend/server.js",
     "start-frontend": "cd frontend && npm start",
