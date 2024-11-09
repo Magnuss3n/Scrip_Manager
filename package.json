@@ -1,0 +1,25 @@
+{
+  "name": "scrip_manager",
+  "version": "1.0.0",
+  "description": "Copyright exclusively reserved@Lavanye_Singh",
+  "main": "frontend/src/index.js",
+  "scripts": {
+    "start": "node backend/server.js",
+    "server": "nodemon backend/server.js",
+    "start-frontend": "cd frontend && npm start",
+    "start-backend": "cd backend && npm start",
+    "build": "npm install &&  npm install --prefix frontend && npm run build --prefix frontend",
+    "test": "start"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "autoprefixer": "^10.4.20",
+    "axios": "^1.7.7",
+    "postcss": "^8.4.45",
+    "tailwindcss": "^3.4.10"
+  },
+  "devDependencies": {
+    "nodemon": "^3.1.7"
+  }
+}
