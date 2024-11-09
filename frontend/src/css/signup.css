@@ -1,0 +1,114 @@
+/* home.css */
+
+/* Global Styles */
+@property --angle {
+    syntax: "<angle>";
+    initial-value: 0deg;
+    inherits: false;
+}
+
+.signup-container {
+    position: relative;
+    z-index: 0;
+    /* Keeps the content above the animation */
+    margin: 0 auto;
+    padding: 0.6em;
+    width: 100%;
+    background: rgba(28, 31, 43, 0.8);
+    /* Semi-transparent background */
+    text-align: center;
+    border-radius: 10px;
+}
+
+.signup-container::after,
+.signup-container::before {
+    content: '';
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    background-image: conic-gradient(from var(--angle), #ff4545, #00ff99, #006aff, #ff0095, #ff4545);
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: -1;
+    padding: 3px;
+    border-radius: 10px;
+    animation: 2.5s spin linear infinite;
+}
+
+.signup-container::before {
+    filter: blur(1rem);
+    opacity: 0.8;
+}
+
+@keyframes spin {
+    from {
+        --angle: 0deg;
+    }
+
+    to {
+        --angle: 360deg;
+    }
+}
+
+.signup-content {
+    background: rgb(26, 20, 53);
+    /* This is the solid background for the content inside */
+    padding: 2em;
+    border-radius: 10px;
+    position: relative;
+    z-index: 1;
+    /* Keep the content above the animated border */
+}
+
+.custom-field {
+    position: relative;
+    font-size: 14px;
+    padding-top: 20px;
+    margin-bottom: 5px;
+}
+
+.custom-field input {
+    border: none;
+    appearance: none;
+    background-color: #f2f2f2;
+    padding: 15px;
+    padding-top: 20px;
+    padding-right: 25px;
+    border-radius: 3px;
+    width: 250px;
+    outline: none;
+    font-size: 14px;
+}
+
+.custom-field .placeholder {
+    position: absolute;
+    left: 12px;
+    top: calc(40%);
+    transform: translate(10%);
+    color: #aaa;
+    transition:
+        top 0.3s ease,
+        font-size 0.3s ease,
+        color 0.3s ease;
+}
+
+.custom-field input:valid+.placeholder,
+.custom-field input:focus+.placeholder {
+    top: -23px;
+    font-size: 13px;
+    font-weight: 500;
+    color: #ffffff;
+}
+
+/* .custom-field input {
+    border-radius: 0;
+    border-top-left-radius: 3px;
+    border-top-right-radius: 3px;
+    background:
+        linear-gradient(90deg, #222, #222) center bottom/0 2x no-repeat,
+        linear-gradient(90deg, #ccc, #ccc) left bottom/100% 2px no-repeat,
+        linear-gradient(90deg, #fafafa, #fafafa) left bottom/100% no-repeat;
+    transition: background-size 0.3s ease;
+    ;
+} */

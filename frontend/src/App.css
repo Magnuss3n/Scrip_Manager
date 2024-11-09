@@ -1,0 +1,21 @@
+.App {
+  padding: 4px;
+  background-color: #0c0c20;
+  display: flex;
+  height: 100vh;
+  align-items: center;
+  justify-content: center;
+}
+
+/* .app {
+  width: 100%;
+  height: 100%;
+  background-color: #111111;
+  background-image: linear-gradient(32deg,
+      rgba(8, 8, 8, 0.74) 30px,
+      transparent);
+  background-size: 60px 60px;
+  background-position: -5px -5px;
+} */
+
+/* //p-4 h-screen flex items-center justify-center */

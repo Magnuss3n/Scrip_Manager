@@ -1,0 +1,212 @@
+.parent-container {
+    color: aliceblue;
+    padding: 10px;
+}
+
+.filter-buttons {
+    display: flex;
+    color: whitesmoke;
+    justify-content: space-between;
+}
+
+.delete-button {
+    display: block;
+    width: 100%;
+    padding: 0.6rem;
+    text-align: center;
+    font-size: 1rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    border: 3px solid #000;
+    background-color: #ffffff;
+    color: #000000;
+    position: relative;
+    transition: all 0.3s ease;
+    box-shadow: 5px 5px 0 #d10505;
+    overflow: hidden;
+    text-decoration: none;
+    margin-bottom: 0.9rem;
+}
+
+.update-info {
+    display: flex;
+}
+
+.edit-button {
+    display: block;
+    width: 100%;
+    padding: 0.75rem;
+    text-align: center;
+    font-size: 1rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    border: 3px solid #000;
+    background-color: #ffffff;
+    color: #000000;
+    position: relative;
+    transition: all 0.3s ease;
+    box-shadow: 5px 5px 0 #d10505;
+    overflow: hidden;
+    text-decoration: none;
+    margin-bottom: 1rem;
+}
+
+.edit-button {
+    background-color: #000;
+    color: #fff;
+}
+
+.edit-button:hover {
+    background-color: #ff0000;
+    border-color: #ff0000;
+    color: #fff;
+    box-shadow: 7px 7px 0 #800000;
+}
+
+.edit-button:hover {
+    transform: translate(-2px, -2px);
+    box-shadow: 7px 7px 0 #503636;
+}
+
+.edit-button::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(120deg,
+            transparent,
+            rgba(255, 255, 255, 0.3),
+            transparent);
+    transition: all 0.6s;
+}
+
+.edit-button:active {
+    transform: translate(5px, 5px);
+    box-shadow: none;
+}
+
+.edit-button:hover::before {
+    left: 100%
+}
+
+
+.delete-button:hover {
+    background-color: #296fbb;
+    border-color: #531414;
+    color: #fff;
+    box-shadow: 7px 7px 0 #030303;
+}
+
+.delete-button::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(120deg,
+            transparent,
+            rgba(255, 255, 255, 0.3),
+            transparent);
+    transition: all 0.6s;
+}
+
+.delete-button:hover::before {
+    left: 100%
+}
+
+.delete-button:hover {
+    transform: translate(-2px, -2px);
+    box-shadow: 7px 7px 0 #503636;
+}
+
+.delete-button:active {
+    transform: translate(5px, 5px);
+    box-shadow: none;
+}
+
+.portfolio-rows {
+    --input-focus: #2d8cf0;
+    --font-color: #fefefe;
+    --font-color-sub: #7e7e7e;
+    --bg-color: #111;
+    --main-color: #fefefe;
+    padding: 20px;
+    background: var(--bg-color);
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: center;
+    gap: 20px;
+    border-radius: 5px;
+    border: 2px solid var(--main-color);
+    box-shadow: 4px 4px var(--main-color);
+}
+
+.portfolio-name {
+    font-size: large;
+    font-weight: 700;
+}
+
+.stock-table {
+    width: 100%;
+    /* Optional: make the table take full width */
+    border-collapse: collapse;
+    /* Collapse borders for a cleaner look */
+}
+
+.stock-table th,
+.stock-table td {
+    padding: 12px 15px;
+    /* Increase padding for more space */
+    text-align: left;
+    /* Align text to the left */
+    border: 1px solid #141730;
+    /* Add border for visibility (optional) */
+}
+
+.stock-table th {
+    background-color: #0d0933;
+    /* Dark background for header */
+    color: #fff;
+    /* White text color for better contrast */
+}
+
+.stock-table tbody tr:hover {
+    background-color: rgba(255, 255, 255, 0.1);
+
+    /* Light hover effect */
+}
+
+@media (max-width: 1056px) {
+
+    .stock-table th,
+    .stock-table td {
+        padding: 8px 10px;
+        /* Decrease padding for smaller screens */
+        font-size: 0.9rem;
+        /* Reduce font size for better fit */
+    }
+}
+
+@media (max-width: 950px) {
+
+    .stock-table th,
+    .stock-table td {
+        padding: 6px 8px;
+        /* Further decrease padding for very small screens */
+        font-size: 0.8rem;
+        /* Further reduce font size */
+    }
+}
+
+.small-button {
+    padding: 0.3rem 0.2rem;
+    /* Smaller padding */
+    font-size: 1rem;
+    /* Smaller font size */
+    margin-right: 0.1rem;
+    /* Space between buttons */
+}

@@ -1,0 +1,183 @@
+/* From Uiverse.io by arafatrahat94 */
+.card {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    /* Center all children horizontally */
+    justify-content: flex-start;
+    --bg: #1e203b;
+    background-color: var(--bg);
+    /* Start content from the top */
+    padding: 2rem;
+    width: 100%;
+    height: 96vh;
+    border-radius: 6px;
+    box-shadow:
+        20px 20px 20px #1f0000;
+}
+
+
+
+.sub-title {
+    display: flex;
+    align-items: center;
+    /* Align icon and text vertically */
+    justify-content: center;
+    /* Center the content horizontally */
+    font-size: 25px;
+    font-weight: 700;
+    /* Adjust the size as needed */
+    color: rgb(255, 255, 255);
+    margin-bottom: 1rem;
+    /* Add space below the title */
+}
+
+.container {
+    position: relative;
+    width: 320px;
+    border: 4px solid #000;
+    background-color: #fff;
+    padding: 1.5rem;
+    box-shadow: 10px 10px 0 #000;
+    font-family: "Arial", sans-serif;
+    margin-bottom: 10px;
+}
+
+.input {
+    width: 95%;
+    border: 1px solid silver !important;
+    border-radius: 5px;
+    padding: 10px 15px;
+    box-sizing: border-box;
+    color: #000103;
+    height: 40px;
+    padding: 0rem 15px;
+    box-shadow: 5px 5px 0 0;
+}
+
+.input::placeholder {
+    color: transparent;
+}
+
+.input:placeholder-shown~.label {
+    top: 35px;
+    border-right: none;
+    border-left: none;
+}
+
+.label {
+    background-color: white;
+    border-left: 1px solid silver;
+    border-right: 1px solid silver;
+    color: #9b9b9b;
+    display: block;
+    font-size: 0.9em;
+    margin-left: 10px;
+    padding: 0 10px;
+    pointer-events: none;
+    position: absolute;
+    top: -10px;
+    transition: 0.2s;
+}
+
+.input:focus {
+    border: 1px solid #a31705 !important;
+    outline: none;
+    box-shadow: none;
+    transform: matrix3d();
+    animation-duration: 1;
+}
+
+.input:focus~.label {
+    background-color: white;
+    color: #270101;
+    font-weight: 400;
+    font-size: 0.9em;
+    margin-left: 10px;
+    padding: 0 10px;
+    position: absolute;
+    top: 7px;
+    transition: 0.3s;
+}
+
+
+/* From Uiverse.io by ernestnash */
+.btn {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    padding: 0.9rem 1.8rem;
+    font-size: 16px;
+    font-weight: 700;
+    color: white;
+    border: 3px solid rgb(252, 70, 100);
+    cursor: pointer;
+    position: relative;
+    background-color: transparent;
+    text-decoration: none;
+    overflow: hidden;
+    z-index: 1;
+    font-family: inherit;
+    width: 100%;
+    max-width: 350px;
+    margin: 10px auto;
+}
+
+.btn::before {
+    content: "";
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgb(202, 13, 38);
+    transform: translateX(-100%);
+    transition: all .3s;
+    z-index: -1;
+}
+
+.btn:hover::before {
+    transform: translateX(0);
+}
+
+.btn svg {
+    margin-right: 0.5rem;
+    /* Space between icon and text */
+    font-size: 1.5rem;
+    /* Adjust icon size */
+}
+
+.cancel {
+    /* Variables */
+    --button_radius: 0.75em;
+    --button_color: #e8e8e8;
+    --button_outline_color: #000000;
+    font-size: 17px;
+    font-weight: bold;
+    border: none;
+    cursor: pointer;
+    border-radius: var(--button_radius);
+    background: var(--button_outline_color);
+}
+
+.button_top {
+    display: block;
+    box-sizing: border-box;
+    border: 2px solid var(--button_outline_color);
+    border-radius: var(--button_radius);
+    background: var(--button_color);
+    color: var(--button_outline_color);
+    padding: 0.75em 1.5em;
+    transform: translateY(-0.2em);
+    transition: transform 0.1s ease;
+}
+
+.cancel:hover .button_top {
+    /* Pull the button upwards when hovered */
+    transform: translateY(-0.33em);
+}
+
+.cancel:active .button_top {
+    /* Push the button downwards when pressed */
+    transform: translateY(0);
+}

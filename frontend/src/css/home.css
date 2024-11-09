@@ -1,0 +1,131 @@
+.Home {
+    display: grid;
+    grid-template-columns: 40% 60%;
+    /* 20% for form, 80% for watchlist */
+    gap: 20px;
+    padding: 20px;
+    height: 100vh;
+    /* Full height to enable scrolling */
+    box-sizing: border-box;
+    overflow: hidden;
+    /* Hide overflow on main container */
+}
+
+.card {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: #1e203b;
+    padding: 2rem;
+    border-radius: 6px;
+    box-shadow: 20px 20px 20px #1f0000;
+    overflow-y: auto;
+    /* Allow scrolling for the form content */
+    height: 100%;
+    /* Take full height of container */
+    max-width: 100%;
+}
+
+.parent-container {
+    overflow-y: auto;
+    /* Enable scroll for portfolio list */
+    color: aliceblue;
+    padding: 10px;
+    background-color: #2d2f45;
+    border-radius: 6px;
+    height: 100%;
+    /* Take full height of container */
+}
+
+
+@media (max-width: 768px) {
+    .Home {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        padding: 20px;
+        height: 100vh;
+        /* Make sure the entire screen is used */
+        overflow-y: auto;
+        /* Allow entire page to scroll */
+        box-sizing: border-box;
+    }
+
+    .card {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        background-color: #1e203b;
+        padding: 2rem;
+        width: 100%;
+        max-width: 800px;
+        /* Set a max-width if you want to limit its width */
+        border-radius: 6px;
+        box-shadow: 20px 20px 20px #1f0000;
+        margin-bottom: 20px;
+        /* Space between card and portfolios */
+    }
+
+    .parent-container {
+        width: 100%;
+        max-width: 800px;
+        color: aliceblue;
+        padding: 10px 20px;
+        background-color: #2d2f45;
+        border-radius: 6px;
+        margin-top: 20px;
+    }
+
+    .portfolio-rows {
+        margin-bottom: 1rem;
+        padding: 1rem;
+        border: 1px solid #ccc;
+        border-radius: 6px;
+        background-color: #333;
+    }
+}
+
+
+/* AddScrip Container */
+/* .add-scrip-container {
+    flex: 0 1 25%;
+     Allow it to shrink and grow 
+    max-width: 3%;
+     Cap width at 25% of the screen 
+    min-width: 370px;
+     Ensure it doesn't shrink too much on smaller screens 
+    overflow: auto;
+} */
+
+/* Watchlist Container */
+/* .watchlist-container {
+    flex: 1;
+    /* Allow it to take remaining space */
+/* max-width: 65%;
+    /* Ensure this container takes most of the remaining space */
+/* min-width: 300px;
+    overflow: auto;
+    max-height: 92vh; */
+
+
+/* Responsive behavior for smaller screens */
+/* @media (max-width: 768px) {
+    .Home {
+        flex-direction: column;
+        
+        align-items: center;
+        
+        padding: 10px;
+       
+    }
+
+    .add-scrip-container,
+    .watchlist-container {
+        max-width: 100%;
+       
+        min-width: unset;
+        
+        padding: 10px;
+        
+    }
+} */
