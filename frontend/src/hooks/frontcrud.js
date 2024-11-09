@@ -3,7 +3,7 @@ import Cookies from 'js-cookie';
 
 
 const api = axios.create({
-    baseURL: 'http://localhost:2000/api/auth/',
+    baseURL: 'https://stock-manager-0dkk.onrender.com/api/auth/',
     withCredentials: true,
 });
 
